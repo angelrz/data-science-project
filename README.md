@@ -22,42 +22,57 @@ python -m pip install -r requirements.txt
 
 ## Configurar el entorno en Windows
 
-### Clonar el repositorio
+### Clonar el repositorio (CMD por defecto)
 
-```powershell
+```cmd
 git clone https://github.com/angelrz/data-science-project.git
 cd data-science-project/
 ```
 
-### 1. Crear el nuevo entorno virtual
+### 1. Crear el nuevo entorno virtual (CMD por defecto)
 
-```powershell
+```cmd
 py -m venv venv
 ```
 
-### 2. Activar el entorno
+### 2. Activar el entorno (CMD por defecto)
 
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-Si PowerShell da error de política, ejecuta una sola vez:
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"):
->> Presionar A
-```
-
-Alternativamente, usa CMD:
 ```cmd
 .\venv\Scripts\activate.bat
 ```
 
-### 3. Instalar dependencias
+Si prefieres PowerShell, usa estas instrucciones alternativas:
 
 ```powershell
+# Clonar (PowerShell alterno)
+git clone https://github.com/angelrz/data-science-project.git
+cd data-science-project/
+
+# Crear entorno (PowerShell alterno)
+py -m venv venv
+
+# Activar entorno (PowerShell alterno)
+.\venv\Scripts\Activate.ps1
+```
+
+Si PowerShell da error de política al activar, ejecuta una sola vez:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+
+### 3. Instalar dependencias (válido en CMD y PowerShell)
+
+```cmd
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+```
+
+### 4. Desactivar el entorno virtual
+
+Para cerrar/desactivar el entorno virtual tanto en CMD como en PowerShell, ejecuta:
+
+```cmd
+deactivate
 ```
 
 > [!NOTE]
